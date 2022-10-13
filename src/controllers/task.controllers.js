@@ -54,7 +54,7 @@ ctrlTask.postTasks = async (req, res) => {
         // Guardar tarea en la base de datos
         const task = await nuevaTarea.save();
         return res.json({
-            message:'La tarea fue guardada con éxito',
+            message:'Tarea guardada con éxito',
             task});
 }
 
@@ -83,7 +83,7 @@ const taskUpdate = await Task.findOneAndUpdate(filter,update);
 
     if (!taskUpdate) {
         return res.status(400).json({
-            msg: 'No se pudo actualizar la tarea'
+            msg: 'No fue posible actualizar la tarea'
         });
     };
 
@@ -118,7 +118,7 @@ ctrlTask.deleteTasks = async (req, res) => {
 
     if (!taskUpdate) {
         return res.status(400).json({
-            message: 'No se pudo eliminar la tarea.'
+            message: 'No fue posible eliminar la tarea.'
         });
     }
 

@@ -7,12 +7,10 @@ const { getUsers,
     deleteUser,
     } = require('../controllers/user.controllers');
 
-/* ----------- GET ----------- */
+
 
 // Conseguir datos del usuario loggeado
 router.get('/user',[validarJWT], getUsers);
-
-/* ----------- POST ----------- */
 
 // Agregar un usuario
 router.post('/user',[], postUser);
